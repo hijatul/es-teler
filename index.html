@@ -1,0 +1,398 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Es Teler Nusantara</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            🍧 <span>Es Teler</span>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#tentang">Tentang</a>
+            <a href="#kontak">Kontak</a>
+        </nav>
+
+        <button class="cart-btn" onclick="openCart()">
+            🛒 <span id="cart-count">0</span>
+        </button>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <span class="badge">✨ Segar • Manis • Nikmat</span>
+
+            <h1>
+                Nikmati Kesegaran
+                <span>Es Teler</span>
+                Favoritmu
+            </h1>
+
+            <p>
+                Perpaduan alpukat, kelapa muda, nangka,
+                susu dan topping pilihan dalam satu mangkuk
+                kesegaran.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#menu" class="btn-primary">
+                    🍨 Lihat Menu
+                </a>
+
+                <a href="#tentang" class="btn-secondary">
+                    Tentang Kami
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <!-- GANTI GAMBAR DI SINI -->
+            <img src="images/es-teler-original.jpg"
+                 alt="Es Teler">
+
+            <div class="floating-card">
+                ⭐ 4.9/5
+                <small>Favorit pelanggan</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MENU -->
+    <section class="menu-section" id="menu">
+
+        <div class="section-title">
+            <span>MENU KAMI</span>
+            <h2>Pilih Es Teler Favoritmu</h2>
+            <p>
+                Dibuat menggunakan bahan segar dan berkualitas.
+            </p>
+        </div>
+
+
+        <div class="menu-container">
+
+            <!-- MENU 1 -->
+            <div class="menu-card">
+
+                <div class="menu-image">
+                    <img src="images/es-teler-original.jpg"
+                         alt="Es Teler Original">
+
+                    <span class="favorite">❤️</span>
+                </div>
+
+                <div class="menu-info">
+
+                    <span class="category">Best Seller</span>
+
+                    <h3>Es Teler Original</h3>
+
+                    <p>
+                        Alpukat, kelapa muda, nangka,
+                        susu dan sirup spesial.
+                    </p>
+
+                    <div class="menu-bottom">
+
+                        <strong>Rp13.000</strong>
+
+                        <button onclick="addToCart('Es Teler Original', 15000)">
+                            + Pesan
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- MENU 2 -->
+            <div class="menu-card">
+
+                <div class="menu-image">
+
+                    <img src="images/es-teler-durian.jpg"
+                         alt="Es Teler Durian">
+
+                    <span class="favorite">❤️</span>
+
+                </div>
+
+                <div class="menu-info">
+
+                    <span class="category">Premium</span>
+
+                    <h3>Es Teler Durian</h3>
+
+                    <p>
+                        Es teler dengan tambahan durian
+                        pilihan yang lembut dan harum.
+                    </p>
+
+                    <div class="menu-bottom">
+
+                        <strong>Rp20.000</strong>
+
+                        <button onclick="addToCart('Es Teler Durian', 22000)">
+                            + Pesan
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- MENU 3 -->
+            <div class="menu-card">
+
+                <div class="menu-image">
+
+                    <img src="images/es-teler-alpukat.jpg"
+                         alt="Es Teler Alpukat">
+
+                    <span class="favorite">❤️</span>
+
+                </div>
+
+                <div class="menu-info">
+
+                    <span class="category">Favorit</span>
+
+                    <h3>Es Teler Alpukat</h3>
+
+                    <p>
+                        Alpukat creamy dengan kelapa muda
+                        dan susu segar.
+                    </p>
+
+                    <div class="menu-bottom">
+
+                        <strong>Rp15.000</strong>
+
+                        <button onclick="addToCart('Es Teler Alpukat', 18000)">
+                            + Pesan
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- MENU 4 -->
+            <div class="menu-card">
+
+                <div class="menu-image">
+
+                    <img src="images/es-teler-cendol.jpg"
+                         alt="Es Teler Cendol">
+
+                    <span class="favorite">❤️</span>
+
+                </div>
+
+                <div class="menu-info">
+
+                    <span class="category">New</span>
+
+                    <h3>Es Teler Cendol</h3>
+
+                    <p>
+                        Es teler segar dengan tambahan
+                        cendol dan gula aren.
+                    </p>
+
+                    <div class="menu-bottom">
+
+                        <strong>Rp15.000</strong>
+
+                        <button onclick="addToCart('Es Teler Cendol', 17000)">
+                            + Pesan
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- KEUNGGULAN -->
+    <section class="features">
+
+        <div class="feature">
+            <div>🥑</div>
+            <h3>Bahan Segar</h3>
+            <p>Menggunakan bahan berkualitas setiap hari.</p>
+        </div>
+
+        <div class="feature">
+            <div>🧊</div>
+            <h3>Segar & Dingin</h3>
+            <p>Disajikan dingin untuk kesegaran maksimal.</p>
+        </div>
+
+        <div class="feature">
+            <div>❤️</div>
+            <h3>Dibuat dengan Cinta</h3>
+            <p>Racikan spesial untuk pelanggan.</p>
+        </div>
+
+        <div class="feature">
+            <div>🚀</div>
+            <h3>Pesan Cepat</h3>
+            <p>Pesanan diproses dengan cepat.</p>
+        </div>
+
+    </section>
+
+
+    <!-- TENTANG -->
+    <section class="about" id="tentang">
+
+        <div class="about-image">
+
+            <img src="images/es-teler-original.jpg"
+                 alt="Es Teler Segar">
+
+        </div>
+
+        <div class="about-content">
+
+            <span>TENTANG KAMI</span>
+
+            <h2>Kesegaran Dalam Setiap Gigitan</h2>
+
+            <p>
+                Es Teler Nusantara menghadirkan minuman
+                tradisional Indonesia dengan tampilan modern.
+                Kami menggunakan buah-buahan segar dan
+                bahan pilihan untuk memberikan rasa terbaik.
+            </p>
+
+            <div class="stats">
+
+                <div>
+                    <strong>10+</strong>
+                    <span>Varian Menu</span>
+                </div>
+
+                <div>
+                    <strong>1K+</strong>
+                    <span>Pelanggan</span>
+                </div>
+
+                <div>
+                    <strong>4.9</strong>
+                    <span>Rating</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- KONTAK -->
+    <section class="contact" id="kontak">
+
+        <div>
+            <span>MAU PESAN?</span>
+            <h2>Segarkan Harimu dengan Es Teler!</h2>
+            <p>
+                Pilih menu favoritmu dan masukkan ke keranjang.
+            </p>
+        </div>
+
+        <a href="#menu" class="btn-primary">
+            🍧 Pesan Sekarang
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            🍧 Es Teler Nusantara
+        </div>
+
+        <p>
+            © 2026 Es Teler Nusantara. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- CART POPUP -->
+    <div class="cart-overlay" id="cartOverlay">
+
+        <div class="cart">
+
+            <button class="close-cart" onclick="closeCart()">
+                ✕
+            </button>
+
+            <h2>🛒 Keranjang Pesanan</h2>
+
+            <div id="cart-items"></div>
+
+            <div class="cart-total">
+
+                <span>Total</span>
+
+                <strong id="cart-total">
+                    Rp0
+                </strong>
+
+            </div>
+
+            <button class="checkout-btn"
+                    onclick="checkout()">
+
+                💬 Pesan Sekarang
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
